@@ -1,0 +1,147 @@
+Sure Clint — here’s a **clean GitHub-ready** version (better layout + organized + quick notes).
+
+---
+
+# PostgreSQL CRUD Cheat Sheet 🐘 (Basic Commands)
+
+Simple **CRUD** (Create, Read, Update, Delete) + common extras.
+
+---
+
+## 1) CREATE ✅ (Table + Insert)
+
+### Create Table
+
+```sql
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE,
+  age INT,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
+
+### Insert Row
+
+```sql
+INSERT INTO users (name, email, age)
+VALUES ('Clint', 'clint@gmail.com', 20);
+```
+
+---
+
+## 2) READ ✅ (SELECT)
+
+### Select All
+
+```sql
+SELECT * FROM users;
+```
+
+### Select Specific Columns
+
+```sql
+SELECT name, email FROM users;
+```
+
+### Select With Condition
+
+```sql
+SELECT * FROM users WHERE age >= 18;
+```
+
+### Select One Row (by ID)
+
+```sql
+SELECT * FROM users WHERE id = 1;
+```
+
+### Sort Results
+
+```sql
+SELECT * FROM users ORDER BY id DESC;
+```
+
+### Limit Rows
+
+```sql
+SELECT * FROM users LIMIT 5;
+```
+
+---
+
+## 3) UPDATE ✅
+
+### Update One Column
+
+```sql
+UPDATE users
+SET age = 21
+WHERE id = 1;
+```
+
+### Update Multiple Columns
+
+```sql
+UPDATE users
+SET name = 'New Name',
+    email = 'new@gmail.com'
+WHERE id = 1;
+```
+
+---
+
+## 4) DELETE ✅
+
+### Delete One Row
+
+```sql
+DELETE FROM users WHERE id = 1;
+```
+
+### Delete All Rows (Table stays)
+
+```sql
+DELETE FROM users;
+```
+
+---
+
+# Extra Useful Commands ⚡
+
+### Drop Table (Deletes table completely)
+
+```sql
+DROP TABLE users;
+```
+
+### Add Column
+
+```sql
+ALTER TABLE users
+ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+```
+
+### Remove Column
+
+```sql
+ALTER TABLE users
+DROP COLUMN age;
+```
+
+### Count Rows
+
+```sql
+SELECT COUNT(*) FROM users;
+```
+
+### Search Text (LIKE)
+
+```sql
+SELECT * FROM users
+WHERE name LIKE '%cli%';
+```
+
+---
+
