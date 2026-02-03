@@ -1,0 +1,39 @@
+Perfect! WSL is now working! Now let's install Redis:
+
+```bash
+# Update package list
+sudo apt update
+
+# Install Redis
+sudo apt install redis-server -y
+
+# Start Redis
+sudo service redis-server start
+
+# Test if it's working
+redis-cli ping
+```
+
+If you see `PONG`, Redis is running! 
+
+Now you can use the Redis code I shared earlier in your .NET project. Just make sure your connection string in `appsettings.json` is:
+
+```json
+{
+  "ConnectionStrings": {
+    "Redis": "localhost:6379"
+  }
+}
+```
+
+And you're all set! Redis is now running on your Windows machine through WSL.
+
+**Tip:** Every time you restart your computer, you'll need to start Redis again:
+```bash
+sudo service redis-server start
+```
+
+Or you can set it to auto-start:
+```bash
+sudo systemctl enable redis-server
+```
