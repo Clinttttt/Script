@@ -37,3 +37,14 @@ Or you can set it to auto-start:
 ```bash
 sudo systemctl enable redis-server
 ```
+
+
+
+
+
+
+redis-cli FLUSHALL
+sudo service redis restart
+sudo service redis-server start
+ redis-cli ping
+
