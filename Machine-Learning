@@ -1,0 +1,31 @@
+install this Packages: 
+dotnet add package Microsoft.ML
+dotnet add package Microsoft.ML.ImageAnalytics
+dotnet add package Microsoft.ML.Vision
+dotnet add package SciSharp.TensorFlow.Redist
+
+(on Api)
+mkdir ml-training
+cd ml-training
+mkdir images
+
+e.g:
+# Create a folder with YOUR NAME
+mkdir "Handsome Person"
+# Put 3-5 photos of yourself in this folder
+# Name them: photo1.jpg, photo2.jpg, photo3.jpg
+
+# Structure should be:
+# ml-training/
+#   images/
+#     Handsome Person/
+#       photo1.jpg
+#       photo2.jpg
+#       photo3.jpg
+
+
+
+# Retrain
+cd ..
+mlnet image-classification --dataset ./images -o ./MyModel --name HandsomeModel
+
