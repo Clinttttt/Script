@@ -1,3 +1,6 @@
+--CLI--
+dotnet tool update -g mlnet(if dont have)
+
 install this Packages: 
 dotnet add package Microsoft.ML
 dotnet add package Microsoft.ML.ImageAnalytics
