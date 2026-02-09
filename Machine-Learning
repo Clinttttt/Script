@@ -32,3 +32,5 @@ mkdir "Handsome Person"
 cd ..
 mlnet image-classification --dataset ./images -o ./MyModel --name HandsomeModel
 
+mlnet image-classification --dataset "TrainingData" --name "MLModel" -o "SampleImageClassification\SampleImageClassification.Model"
+
