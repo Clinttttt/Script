@@ -33,6 +33,9 @@ mkdir "Handsome Person"
 cd ..
 mlnet image-classification --dataset "TrainingData" --name "MLModel" -o "."
 
+(copy the MLModel.zip into TrainedModel\MLModel.zip)
+copy "SampleImageClassification\SampleImageClassification.Model\MLModel.zip" "TrainedModel\MLModel.zip"
+
 (delete the data inside SampleImageClassification)
 rmdir s/ /q SampleImageClassification
 
