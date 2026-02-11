@@ -31,9 +31,7 @@ mkdir "Handsome Person"
 
 # Retrain
 cd ..
-mlnet image-classification --dataset ./images -o ./MyModel --name HandsomeModel
-
-mlnet image-classification --dataset "TrainingData" --name "MLModel" -o "SampleImageClassification\SampleImageClassification.Model"
+mlnet image-classification --dataset "TrainingData" --name "MLModel" -o "."
 
 (delete the data inside SampleImageClassification)
 rmdir s/ /q SampleImageClassification
