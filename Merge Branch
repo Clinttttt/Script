@@ -138,6 +138,20 @@ git push origin master
 
 ---
 
-If you want, I can **make an even shorter “cheat sheet” for Git merge conflicts** that you can just copy-paste next time — it handles **everything automatically**.
 
-Do you want me to make that?
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git lfs install
+Updated Git hooks.
+Git LFS initialized.
+
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git lfs track "*.zip"
+Tracking "*.zip"
+
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git add .gitattributes
+
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git add ImageClassification.Api/TrainedModel/MLModel.zip
+
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git commit -m "Track MLModel.zip with Git LFS"
+[master 76c21ea] Track MLModel.zip with Git LFS
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+
+C:\Users\Clint Villanueva\source\repos\ImageClassification>git push origin master
