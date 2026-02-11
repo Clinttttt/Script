@@ -6,6 +6,7 @@ dotnet add package Microsoft.ML
 dotnet add package Microsoft.ML.ImageAnalytics
 dotnet add package Microsoft.ML.Vision
 dotnet add package SciSharp.TensorFlow.Redist
+dotnet add package Microsoft.Extensions.ML
 
 (on Api)
 mkdir ml-training
@@ -33,4 +34,7 @@ cd ..
 mlnet image-classification --dataset ./images -o ./MyModel --name HandsomeModel
 
 mlnet image-classification --dataset "TrainingData" --name "MLModel" -o "SampleImageClassification\SampleImageClassification.Model"
+
+(delete the data inside SampleImageClassification)
+rmdir s/ /q SampleImageClassification
 
