@@ -155,3 +155,13 @@ C:\Users\Clint Villanueva\source\repos\ImageClassification>git commit -m "Track 
  2 files changed, 1 insertion(+), 4 deletions(-)
 
 C:\Users\Clint Villanueva\source\repos\ImageClassification>git push origin master
+
+
+
+💡 Pro tip: You can also list all branches from GitHub and switch to the one you were working on:
+
+git branch -a   # Lists all local and remote branches
+git checkout branch-name  # Switch to a specific branch
+
+
+
