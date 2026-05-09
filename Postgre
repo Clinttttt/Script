@@ -145,3 +145,27 @@ WHERE name LIKE '%cli%';
 
 ---
 
+
+
+
+
+
+Delete all tables
+
+
+TRUNCATE TABLE
+    "AuditLogs",
+    "CollectorFacilityAssignments",
+    "Contracts",
+    "DailyCollections",
+    "Facilities",
+    "PaymentRecords",
+    "SlaughterTransactions",
+    "Stalls",
+    "TpmAttendances",
+    "TpmVendors",
+    "TrmTransporters",
+    "TrmTrips",
+    "Users"
+RESTART IDENTITY CASCADE;
+
